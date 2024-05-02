@@ -84,6 +84,9 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        cd openwrt
+        git checkout 87d7c07cfa54bca6eb537d269e58167d8f0ab66a
+        sed -i 's/PATCHVER:=6.1/PATCHVER:=5.15/g' target/linux/rockchip/Makefile
 
     - name: 缓存构建动作
       uses: klever1988/cachewrtbuild@main
