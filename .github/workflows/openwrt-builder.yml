@@ -24,7 +24,7 @@ on:
     - cron: 0 16 * * *
 
 env:
-  REPO_URL: https://github.com/Entruv1/lede
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: H69K/feeds.conf
   CONFIG_FILE: H69K/.config
@@ -84,8 +84,6 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        git checkout 87d7c07cfa54bca6eb537d269e58167d8f0ab66a
-        make dirclean
 
     - name: 缓存构建动作
       uses: klever1988/cachewrtbuild@main
