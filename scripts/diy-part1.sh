@@ -48,5 +48,3 @@ wget -qO- https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/downlo
 # MT7916 160mhz修复
 rm -rf package/kernel/mt76
 git clone --depth=1 https://github.com/2253845067/mt76 package/kernel/mt76
-#核心版本改为5.15
-sed -i 's/PATCHVER:=6.1/PATCHVER:=5.15/g' target/linux/rockchip/Makefile   # 修改内核为5.15
