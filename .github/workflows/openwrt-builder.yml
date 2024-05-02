@@ -87,10 +87,6 @@ jobs:
         cd openwrt
         git checkout 849b8c3dbcb8529ae782589f1aac25ebe3030957
         sed -i 's/PATCHVER:=6.1/PATCHVER:=5.15/g' target/linux/rockchip/Makefile
-        echo >> feeds.conf.default
-        echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
-        ./scripts/feeds update istore
-        ./scripts/feeds install -d y -p istore luci-app-store
     - name: 缓存构建动作
       uses: klever1988/cachewrtbuild@main
       with:
