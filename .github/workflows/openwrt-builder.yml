@@ -24,7 +24,7 @@ on:
     - cron: 0 16 * * *
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/Entruv1/lede
   REPO_BRANCH: master
   FEEDS_CONF: H69K/feeds.conf
   CONFIG_FILE: H69K/.config
