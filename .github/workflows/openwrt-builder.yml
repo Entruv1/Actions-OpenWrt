@@ -85,7 +85,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
-        git checkout 87d7c07cfa54bca6eb537d269e58167d8f0ab66a
+        git checkout 849b8c3dbcb8529ae782589f1aac25ebe3030957
         sed -i 's/PATCHVER:=6.1/PATCHVER:=5.15/g' target/linux/rockchip/Makefile
 
     - name: 缓存构建动作
